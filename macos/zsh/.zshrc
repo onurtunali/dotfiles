@@ -3,6 +3,7 @@
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
+export PYTHONDONTWRITEBYTECODE=1
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -70,7 +71,8 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git aws battery)
+plugins=(git aws battery conda-zsh-completion)
+autoload -U compinit && compinit
 
 source $ZSH/oh-my-zsh.sh
 
@@ -104,17 +106,22 @@ set -o vi
 alias ll="ls -alh"
 alias cb="PYTHONDONTWRITEBYTECODE=1 code"
 alias lld="du -sh *"
+alias solr-start="~/platforms/solr-9.3.0/bin/solr start -Dsolr.disable.shardsWhitelist=true"
+alias solr-stop="~/platforms/solr-9.3.0/bin/solr stop" 
+alias mlflow-start="uv tool run mlflow server --backend-store-uri sqlite:////Users/onurtunali/platforms/mlflow/mlflow.db --default-artifact-root /Users/onurtunali/platforms/mlflow/mlflow_artifacts --host 0.0.0.0 --port 5000"
+alias mlflow-clean="uv tool run mlflow gc --backend-store-uri sqlite:////Users/onurtunali/platforms/mlflow/mlflow.db --artifacts-destination /Users/onurtunali/platforms/mlflow/mlflow_artifacts"
 unset LESS
 
 NEWLINE=$'\n'
 PROMPT="${PROMPT} ${NEWLINE}$ "
 
 export PATH=$(brew --prefix openvpn)/sbin:$PATH
+export PATH="/opt/homebrew/opt/node@16/bin:$PATH"
+export SOLR_SECURITY_MANAGER_ENABLED=false
 export KERAS_BACKEND="torch"
 export PYTORCH_ENABLE_MPS_FALLBACK=1
 export LANG=en_US.UTF-8
-
-
+export MLFLOW_TRACKING_URI=http://localhost:5000
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/Users/onurtunali/miniforge3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
@@ -133,3 +140,24 @@ if [ -f "/Users/onurtunali/miniforge3/etc/profile.d/mamba.sh" ]; then
     . "/Users/onurtunali/miniforge3/etc/profile.d/mamba.sh"
 fi
 # <<< conda initialize <<<
+
+
+
+# Created by `pipx` on 2024-06-07 02:28:03
+export PATH="$PATH:/Users/onurtunali/.local/bin"
+
+. "$HOME/.cargo/env"
+
+source /opt/homebrew/opt/chruby/share/chruby/chruby.sh
+source /opt/homebrew/opt/chruby/share/chruby/auto.sh
+chruby ruby-3.3.5
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/onurtunali/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/onurtunali/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/onurtunali/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/onurtunali/google-cloud-sdk/completion.zsh.inc'; fi
+
+# uv shell completion
+eval "$(uv generate-shell-completion zsh)"
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/zulu-20.jdk/Contents/Home
