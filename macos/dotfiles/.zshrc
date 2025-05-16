@@ -71,7 +71,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git aws battery conda-zsh-completion)
+plugins=(git aws battery)
 autoload -U compinit && compinit
 
 source $ZSH/oh-my-zsh.sh
@@ -122,35 +122,6 @@ export KERAS_BACKEND="torch"
 export PYTORCH_ENABLE_MPS_FALLBACK=1
 export LANG=en_US.UTF-8
 export MLFLOW_TRACKING_URI=http://localhost:5000
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/Users/onurtunali/miniforge3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/Users/onurtunali/miniforge3/etc/profile.d/conda.sh" ]; then
-        . "/Users/onurtunali/miniforge3/etc/profile.d/conda.sh"
-    else
-        export PATH="/Users/onurtunali/miniforge3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-
-if [ -f "/Users/onurtunali/miniforge3/etc/profile.d/mamba.sh" ]; then
-    . "/Users/onurtunali/miniforge3/etc/profile.d/mamba.sh"
-fi
-# <<< conda initialize <<<
-
-
-
-# Created by `pipx` on 2024-06-07 02:28:03
-export PATH="$PATH:/Users/onurtunali/.local/bin"
-
-. "$HOME/.cargo/env"
-
-source /opt/homebrew/opt/chruby/share/chruby/chruby.sh
-source /opt/homebrew/opt/chruby/share/chruby/auto.sh
-chruby ruby-3.3.5
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/onurtunali/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/onurtunali/google-cloud-sdk/path.zsh.inc'; fi
@@ -160,4 +131,5 @@ if [ -f '/Users/onurtunali/google-cloud-sdk/completion.zsh.inc' ]; then . '/User
 
 # uv shell completion
 eval "$(uv generate-shell-completion zsh)"
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/zulu-20.jdk/Contents/Home
+export PATH="/opt/homebrew/opt/openjdk@11/bin:$PATH"
+export CPPFLAGS="-I/opt/homebrew/opt/openjdk@11/include"
