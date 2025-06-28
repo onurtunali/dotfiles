@@ -126,5 +126,6 @@ if [ -f '/Users/onurtunali/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/onur
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/onurtunali/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/onurtunali/google-cloud-sdk/completion.zsh.inc'; fi
 
+. "$HOME/.local/bin/env"
 # uv shell completion
 eval "$(uv generate-shell-completion zsh)"
