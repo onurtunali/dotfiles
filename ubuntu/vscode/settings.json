@@ -1,0 +1,156 @@
+{
+    "editor.wordWrap": "on",
+    "editor.fontSize": 14,
+    "editor.largeFileOptimizations": false,
+    "editor.scrollbar.verticalScrollbarSize": 4,
+    "explorer.confirmDelete": false,
+    "terminal.integrated.fontSize": 12,
+    "files.watcherExclude": {
+        "**/.ammonite": true,
+        "**/.bloop": true,
+        "**/.git/*": true,
+        "**/.metals": true,
+        "**/assets/*": true,
+        "**/env/*": true,
+        "**/venv/*": true,
+        "/data/*": true,
+        "/archive/*": true,
+        "**/.venv/*": true
+    },
+    "workbench.startupEditor": "none",
+    "terminal.integrated.inheritEnv": false,
+    "editor.renderWhitespace": "trailing",
+    "[javascript]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "[html]": {
+        "editor.defaultFormatter": "vscode.html-language-features"
+    },
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features",
+    },
+    "markdown.preview.fontSize": 14,
+    "files.associations": {
+        "*.tex": "latex-expl3",
+        "*.csv": "csv"
+    },
+    "notebook.cellFocusIndicator": "border",
+    "notebook.insertToolbarLocation": "hidden",
+    "notebook.markup.fontSize": 15,
+    "notebook.cellToolbarLocation": {
+        "default": "hidden"
+    },
+    "notebook.compactView": true,
+    "notebook.output.textLineLimit": 200,
+    "notebook.formatOnSave.enabled": true,
+    "notebook.codeActionsOnSave": {
+        "notebook.source.organizeImports": "explicit"
+    },
+    "ruff.nativeServer": "on",
+    "ruff.organizeImports": true,
+    "[python]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "charliermarsh.ruff",
+        "editor.semanticHighlighting.enabled": true,
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": "explicit"
+        }
+    },
+    "python.terminal.activateEnvironment": false,
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter-notebook",
+    },
+    "telemetry.telemetryLevel": "off",
+    "search.exclude": {
+        "**/.env": true,
+        "**/.git": true,
+        "**/assets/*": true,
+        "**/bower_components": true,
+        "**/env": true,
+        "**/node_modules": true,
+        "**/venv": true,
+        "/data/*": true,
+        "/archive/*": true,
+        "**/.venv/*": true
+    },
+    "explorer.confirmDragAndDrop": false,
+    "jupyter.askForKernelRestart": false,
+    "editor.glyphMargin": true,
+    "python.analysis.indexing": false,
+    "workbench.list.openMode": "doubleClick",
+    "output.smartScroll.enabled": false,
+    "editor.mouseWheelScrollSensitivity": 0.7,
+    "workbench.list.mouseWheelScrollSensitivity": 0.7,
+    "workbench.list.fastScrollSensitivity": 0.7,
+    "notebook.lineNumbers": "on",
+    "editor.tabCompletion": "on",
+    "editor.codeActionsOnSave": {
+        "source.organizeImports": "explicit"
+    },
+    "editor.smoothScrolling": false,
+    "security.workspace.trust.untrustedFiles": "open",
+    "explorer.autoReveal": false,
+    "diffEditor.wordWrap": "on",
+    "extensions.ignoreRecommendations": true,
+    "editor.minimap.renderCharacters": false,
+    "terminal.integrated.copyOnSelection": true,
+    "jupyter.widgetScriptSources": [
+        "jsdelivr.com",
+        "unpkg.com"
+    ],
+    "git-graph.commitDetailsView.autoCenter": false,
+    "git-graph.graph.style": "angular",
+    "notebook.consolidatedRunButton": true,
+    "editor.unicodeHighlight.ambiguousCharacters": false,
+    "path-intellisense.showHiddenFiles": true,
+    "notebook.output.fontSize": 14,
+    "explorer.compactFolders": false,
+    "workbench.editorLargeFileConfirmation": 2048,
+    "interactiveWindow.alwaysScrollOnNewCell": false,
+    "explorer.sortOrder": "type",
+    "editor.minimap.enabled": false,
+    "files.exclude": {
+        "**/.git": false
+    },
+    // "notebook.defaultFormatter": "ms-python.python",
+    "notebook.editorOptionsCustomizations": {
+        "editor.tabSize": 4,
+        "editor.indentSize": 4
+    },
+    "problems.showCurrentInStatus": true,
+    "notebook.output.wordWrap": true,
+    "terminal.integrated.allowedLinkSchemes": [
+        "file",
+        "http",
+        "https",
+        "mailto",
+        "vscode",
+        "vscode-insiders",
+        "docker-desktop"
+    ],
+    "workbench.colorCustomizations": {
+        "notebook.cellEditorBackground": "#2B2B2B",
+        "notebook.focusedCellBorder": "#b8b8b8",
+    },
+    "github.copilot.chat.generateTests.codeLens": true,
+    "github.copilot.nextEditSuggestions.enabled": false,
+    "github.copilot.advanced": {},
+    "editor.renderControlCharacters": true,
+    "workbench.layoutControl.enabled": true,
+    "workbench.navigationControl.enabled": false,
+    "chat.commandCenter.enabled": false,
+    "window.commandCenter": true,
+    "github.copilot.enable": {
+        "*": false,
+        "plaintext": false,
+        "markdown": false,
+        "scminput": false,
+        "python": false
+    },
+    "workbench.colorTheme": "Gruvbox Dark Hard",
+    "python.analysis.typeCheckingMode": "standard",
+    "diffEditor.renderSideBySide": true,
+    "diffEditor.maxComputationTime": 0,
+    "gitTreeCompare.diffMode": "merge",
+    "workbench.enableExperiments": false
+}
