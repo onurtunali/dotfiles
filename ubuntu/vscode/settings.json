@@ -79,7 +79,7 @@
     "python.analysis.indexing": false,
     "workbench.list.openMode": "doubleClick",
     "output.smartScroll.enabled": false,
-    "editor.mouseWheelScrollSensitivity": 0.7,
+    "editor.mouseWheelScrollSensitivity": 0.9,
     "workbench.list.mouseWheelScrollSensitivity": 0.7,
     "workbench.list.fastScrollSensitivity": 0.7,
     "notebook.lineNumbers": "on",
@@ -152,5 +152,7 @@
     "diffEditor.renderSideBySide": true,
     "diffEditor.maxComputationTime": 0,
     "gitTreeCompare.diffMode": "merge",
-    "workbench.enableExperiments": false
+    "workbench.enableExperiments": false,
+    "window.zoomLevel": 2,
+    "keyboard.dispatch": "keyCode"
 }
