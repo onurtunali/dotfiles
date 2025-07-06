@@ -47,7 +47,14 @@ sudo apt-get -y update
 sudo apt-get -y install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 echo "Requires log out for preventing docker permission errors..."
 
+echo "Neovim install..."
+
+curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.tar.gz
+sudo rm -rf /opt/nvim
+sudo tar -C /opt -xzf nvim-linux-x86_64.tar.gz
+
 cho "Stow configs..."
-stow --dir=./dotfiles/ --target=$HOME .
+stow --adopt --dir=./dotfiles/ --target=$HOME .
+git reset --hard HEAD
 
 dconf load / < gnome-settings.ini

@@ -129,3 +129,4 @@ if [ -f '/Users/onurtunali/google-cloud-sdk/completion.zsh.inc' ]; then . '/User
 . "$HOME/.local/bin/env"
 # uv shell completion
 eval "$(uv generate-shell-completion zsh)"
+export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
