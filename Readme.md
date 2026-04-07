@@ -1,3 +1,3 @@
 # Readme
 
-Various dotfiles for auto system setup including mac and linux
+Various dotfiles for auto system setup including mac and linux.
